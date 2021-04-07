@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/lucyhackwrench/cypress-demo#readme",
   "devDependencies": {
-    "cypress": "^7.0.0"
+    "cypress": "^7.0.0",
+    "cypress-cucumber-preprocessor": "^4.0.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "cypress/features/common",
+    "stepDefinitions": "cypress/features"
   }
 }

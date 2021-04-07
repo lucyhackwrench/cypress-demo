@@ -1,1 +1,11 @@
-{}
+{
+  "integrationFolder": "cypress/features",
+  "testFiles": "**/*.feature",
+  "fixturesFolder": "cypress/fixtures",
+  "ignoreTestFiles": "*.js",
+  "baseUrl": "https://dump-ekb.ru",
+  "video": false,
+  "chromeWebSecurity": false,
+  "viewportWidth": 1400,
+  "viewportHeight": 660
+}
