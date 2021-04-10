@@ -12,18 +12,21 @@ When('я на разделе Оставайтесь на связи', function (
 })
 
 When('я ввожу значение email {string}', function (email) {
-  cy.get('#rec86145677 form')
+  cy.get('#rec86145677')
+      .find('form')
       .find('input[name="Email"]')
       .type(email);
 })
 
 When('сабмичу форму', function () {
-  cy.get('#rec86145677 form')
+  cy.get('#rec86145677')
+      .find('form')
       .submit();
 })
 
 Then('я вижу ошибку валидации email', function () {
-  cy.get('#rec86145677 form')
+  cy.get('#rec86145677')
+      .find('form')
       .find('.js-rule-error-email')
       .should('be.visible');
 })
