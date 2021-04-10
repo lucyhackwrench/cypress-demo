@@ -27,3 +27,7 @@ Then('я вижу ошибку валидации email', function () {
       .find('.js-rule-error-email')
       .should('be.visible');
 })
+
+Then('раздел Оставайтесь на связи соотвествует макету', function () {
+  cy.get('#rec86145677').matchImageSnapshot('subscribe');
+})

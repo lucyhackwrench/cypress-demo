@@ -13,6 +13,9 @@
 // the project's config changing)
 
 const cucumber = require('cypress-cucumber-preprocessor').default;
+const {
+    addMatchImageSnapshotPlugin,
+} = require('cypress-image-snapshot/plugin');
 
 /**
  * @type {Cypress.PluginConfig}
@@ -20,4 +23,5 @@ const cucumber = require('cypress-cucumber-preprocessor').default;
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
     on('file:preprocessor', cucumber());
+    addMatchImageSnapshotPlugin(on, config);
 }
